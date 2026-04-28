@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Nacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .aviso {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .noticia-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .contenido {
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /*Sección formulario contacto*/
+        .contacto-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="aviso">
+    Estás leyendo una noticia completa en El Faro
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.php">El Faro</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/nacional.html">Nacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/deportes.html">Deportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/internacional.html">Internacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/economia.html">Economía</a></li>
+                <li class="nav-item ms-3">
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registroModal">
+                        Registrarse
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4 contenido">
+    <a href="../webs/nacional.html" class="btn btn-secondary mb-3">← Volver a sección</a>
+    <h1 class="mb-3">Confirman sexto caso de hantavirus en región de Los Lagos: joven de 22 años hospitalizado</h1>
+    <p class="text-muted">Publicado el 17 de abril de 2026</p>
+    <img src="../imagenes/noticiaNacional2.jpg" class="noticia-img my-3">
+    <p>
+        Un nuevo caso de hanta fue confirmado en Puerto Montt, región de Los Lagos. Se trata de un joven de 22 años, quien tiene como antecedente de riesgo la realización de actividades de excursión y camping en Cochamó.<br><br>
+
+        Se trata del sexto caso en la región. Según informó la Seremi de Salud, el joven presentó fiebre, cefalea, mialgia y síntomas gastrointestinales.<br><br>
+        Por lo mismo, debió ser internado en la UCI del Hospital de Rancagua -donde estaba de visita- para posteriormente ser trasladado al Hospital del Tórax de Santiago.<br><br>
+
+        Al respecto, la Seremi de Salud, Evelyn Brintrup, insistió en aplicar medidas de autocuidado.<br><br>
+
+        “Las personas pueden ventilar el lugar antes de salir. Si hay un lugar que se mantiene cerrado por mucho tiempo, pueden ventilarlo 30 minutos y después pasar un paño. Siempre usar mascarillas o, en caso de que haya sectores aledaños, alejarse donde existan matorrales, usar caminatas que están o lugares de senderos autorizados, evitar el dejar comidas que estén a la intemperie donde puedan llamar a roedores”, señaló.<br><br>
+
+        El hombre, reportado como nuevo caso, actualmente está con oxigenoterapia con naricera y fuera de riesgo vital.
+    </p>
+</div>
+
+<!--Formulario de contacto-->
+<section class="contacto-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+
+                        <form action="controllers/contactoController.php" method="POST">
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="nombre"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email"
+                                       class="form-control"
+                                       name="correo"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control"
+                                          rows="5"
+                                          name="mensaje"
+                                          required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit"
+                                        name="enviarContacto"
+                                        class="btn btn-dark">
+                                    Enviar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <h4>El Faro</h4>
+        <p>Noticias confiables y actualizadas</p>
+        <p>contacto@elfaro.cl</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!--Modal Registro-->
+<div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">Registro de Usuario</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="controllers/usuarioController.php" method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nombre"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="apellido"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email"
+                               class="form-control"
+                               name="correo"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text"
+                               class="form-control"
+                               name="usuario"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                                name="registrarUsuario"
+                                class="btn btn-warning">
+                            Registrarse
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

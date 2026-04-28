@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Deportes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .aviso {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .noticia-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .contenido {
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /*Sección formulario contacto*/
+        .contacto-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="aviso">
+    Estás leyendo una noticia completa en El Faro
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.php">El Faro</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/nacional.html">Nacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/deportes.html">Deportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/internacional.html">Internacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/economia.html">Economía</a></li>
+                <li class="nav-item ms-3">
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registroModal">
+                        Registrarse
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4 contenido">
+    <a href="../webs/deportes.html" class="btn btn-secondary mb-3">← Volver a sección</a>
+    <h1 class="mb-3">Fórmula 1: FIA aprueba ajustes a reglamento para hacer carreras más rápidas y emocionantes</h1>
+    <p class="text-muted">Publicado el 20 de abril de 2026</p>
+    <img src="../imagenes/noticiaDeportes3.jpg" class="noticia-img my-3">
+    <p>
+        Después de tres carreras, la Fórmula 1 encara una evolución técnica que promete cambiar la forma en que pilotos y equipos interpretan la velocidad.<br><br>
+
+        La FIA, junto con los directores de equipo, fabricantes de motores y la FOM (Formula One Management), ha aprobado una serie de ajustes al reglamento que entrarían en vigor en Miami, pendientes del visto bueno del Consejo Mundial del Deporte Motor.<br><br>
+
+        El objetivo es claro y es tener carreras más rápidas, seguras y emocionantes, corrigiendo problemas detectados en los primeros Grandes Premios y escuchando directamente las opiniones de los protagonistas en pista.
+    </p>
+    <h2>Clasificación: velocidad pura sobre gestión</h2>
+    <p>
+        En la lucha por la pole, los pilotos ya no tendrán que preocuparse tanto por los delicados balances de energía. La recarga máxima de energía se reduce de 8MJ a 7MJ, para limitar el “harvesting” y priorizar la consistencia en la conducción.<br><br>
+
+        Además, la potencia del “superclip” aumenta de 250 kW a 350 kW, ofreciendo un impulso más potente pero breve, de 2 a 4 segundos por vuelta, que permite atacar la pista sin comprometer la estrategia energética. Incluso se amplía de 8 a 12 el número de Grandes Premios donde se aplican límites reducidos, adaptando el reglamento a las exigencias de cada circuito.
+    </p>
+    <h2>Carrera: equilibrio entre espectáculo y seguridad</h2>
+    <p>
+        En los domingos de carrera, la prioridad es evitar picos de velocidad que puedan generar accidentes. El impulso extra tendrá un límite de +150 kW, mientras que el despliegue del MGU-K se ajusta: 350 kW en zonas clave para rebasar y 250 kW en el resto del circuito, manteniendo a los autos controlables sin restar emoción a los adelantamientos.
+        <h5>Salidas y lluvia: tecnología al servicio de la seguridad</h5>
+        Las salidas de carrera recibirán un “refuerzo tecnológico”. Un sistema detectará los autos con baja aceleración tras soltar el embrague y activará automáticamente el MGU-K para evitar bloqueos y colisiones. Además, luces intermitentes en los laterales y la parte trasera alertarán a los competidores en tiempo real.<br><br>
+
+        La seguridad en condiciones de lluvia también mejora. Las mantas térmicas para neumáticos intermedios serán más calientes y el ERS se limitará, ofreciendo mayor control sobre superficies resbaladizas.<br><br>
+
+        Con estos cambios, la Fórmula 1 2026 se prepara para ofrecer carreras más rápidas, intensas y seguras, poniendo al piloto nuevamente en el centro del espectáculo.
+    </p>
+</div>
+
+<!--Formulario de contacto-->
+<section class="contacto-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+
+                        <form action="controllers/contactoController.php" method="POST">
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="nombre"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email"
+                                       class="form-control"
+                                       name="correo"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control"
+                                          rows="5"
+                                          name="mensaje"
+                                          required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit"
+                                        name="enviarContacto"
+                                        class="btn btn-dark">
+                                    Enviar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <h4>El Faro</h4>
+        <p>Noticias confiables y actualizadas</p>
+        <p>contacto@elfaro.cl</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!--Modal Registro-->
+<div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">Registro de Usuario</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="controllers/usuarioController.php" method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nombre"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="apellido"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email"
+                               class="form-control"
+                               name="correo"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text"
+                               class="form-control"
+                               name="usuario"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                                name="registrarUsuario"
+                                class="btn btn-warning">
+                            Registrarse
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

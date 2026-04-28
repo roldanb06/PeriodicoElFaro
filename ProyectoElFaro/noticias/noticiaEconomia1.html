@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Economía</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .aviso {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .noticia-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .contenido {
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /*Sección formulario contacto*/
+        .contacto-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="aviso">
+    Estás leyendo una noticia completa en El Faro
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.php">El Faro</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/nacional.html">Nacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/deportes.html">Deportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/internacional.html">Internacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/economia.html">Economía</a></li>
+                <li class="nav-item ms-3">
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registroModal">
+                        Registrarse
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4 contenido">
+    <a href="../webs/economia.html" class="btn btn-secondary mb-3">← Volver a sección</a>
+    <h1 class="mb-3">Informe preliminar de la CNE: alzas en cuentas de la luz sería de 2,4% promedio en el segundo semestre</h1>
+    <p class="text-muted">Publicado el 17 de abril de 2026</p>
+    <img src="../imagenes/noticiaEconomia1.webp" class="noticia-img my-3">
+    <p>
+        El efecto en cadena del alza de los combustibles cada vez está abarcando nuevas áreas en el costo de la vida.<br><br>
+
+        Subió el precio de la canasta básica, los economistas también proyectan el alza del IPC en un 1,4% para el mes de abril, cifra que no se registra desde marzo del 2022, y ahora se prevé un alza en las tarifas eléctricas para el segundo semestre.<br><br>
+
+        Hoy, la Comisión Nacional de Energía (CNE) publicó su informe técnico preliminar para las tarifas eléctricas del segundo semestre de 2026.<br><br>
+
+        Según la estimación, las cuentas de la luz subirán en promedio un 2,4%.
+    </p>
+    <h2>Alza de la luz en la segunda mitad del año</h2>
+    <p>
+        ¿A qué se debe el alza en el precio de la tarifa? Para calcular el ajuste, son tres los factores protagonistas: el tipo de cambio al dólar, el IPC de Estados Unidos y el precio internacional del petróleo.<br><br>
+
+        Javier Piedra, director general de Fundación Energía para Todos, aclaró que la subida se explica principalmente por la variación negativa del dólar, además de la eliminación del descuento por el error de la CNE y la rebaja por los sobrecostos de Transelec.<br><br>
+
+        “Durante el primer semestre del 2026, todos los usuarios del país tuvieron un descuento en la cuenta de la luz en este componente, a propósito de los errores de la CNE en el cálculo de la tarifa. Este descuento se termina por un lado, lo que produce un alza, pero por otro lado hubo una variación negativa del dólar en un 4,5%”, explicó Piedra.
+    </p>
+
+    <audio class="w-100 my-3" controls>
+        <source src="/audios/audioEconomia1.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>
+        Desde la CNE también ahondaron en la eliminación de estos elementos adicionales. Su secretario ejecutivo, Mauricio Funes, aclaró que “en términos del promedio nacional, si la comparación se realizara respecto de la tarifa sin dichos descuentos, se observaría una disminución del 1,07%”.
+    </p>
+
+    <audio class="w-100 my-3" controls>
+        <source src="/audios/audioEconomia2.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>
+        Si bien la cifra preliminar ya genera inquietud, los expertos creen que el alza que se registrará en enero de 2027 será aún mayor dado la crisis internacional y su efecto que ha tenido en el precio de los combustibles.
+    </p>
+
+</div>
+
+<!--Formulario de contacto-->
+<section class="contacto-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+
+                        <form action="controllers/contactoController.php" method="POST">
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="nombre"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email"
+                                       class="form-control"
+                                       name="correo"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control"
+                                          rows="5"
+                                          name="mensaje"
+                                          required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit"
+                                        name="enviarContacto"
+                                        class="btn btn-dark">
+                                    Enviar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <h4>El Faro</h4>
+        <p>Noticias confiables y actualizadas</p>
+        <p>contacto@elfaro.cl</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!--Modal Registro-->
+<div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">Registro de Usuario</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="controllers/usuarioController.php" method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nombre"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="apellido"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email"
+                               class="form-control"
+                               name="correo"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text"
+                               class="form-control"
+                               name="usuario"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                                name="registrarUsuario"
+                                class="btn btn-warning">
+                            Registrarse
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

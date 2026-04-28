@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Nacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .aviso {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /*Sección formulario contacto*/
+        .contacto-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="aviso">
+    Noticias Nacionales actualizadas minuto a minuto
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.php">El Faro</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="nacional.html">Nacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="deportes.html">Deportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="internacional.html">Internacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="economia.html">Economía</a></li>
+                <li class="nav-item ms-3">
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registroModal">
+                        Registrarse
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+    <h2 class="mb-4 text-center">Noticias Nacionales</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="../imagenes/noticiaNacional2.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Confirman sexto caso de hantavirus en región de Los Lagos: joven de 22 años hospitalizado</h5>
+                    <p class="card-text">Nuevo caso de hanta en Puerto Montt: joven de 22 años es el sexto afectado en Los Lagos. Realizaba excursiones en Cochamó. Presentó síntomas y fue trasladado de urgencia a Santiago. Seremi de Salud insiste en medidas de prevención, como ventilación de espacios y evitar contacto con roedores.</p>
+                    <a href="../noticias/noticiaNacional1.html" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="../imagenes/noticiaNacional1.webp">
+                <div class="card-body">
+                    <h5 class="card-title">Fiscal nacional Ángel Valencia reconoce deuda universitaria: la pagó tras consultas de la prensa</h5>
+                    <p class="card-text">El fiscal nacional, Ángel Valencia, confirmó su millonaria deuda universitaria del 2004, la cual regularizó tras ser contactado por la prensa. Una investigación reveló que él y más de 30 altos funcionarios del Congreso y Contraloría son deudores del Fondo Solidario. Tras el anuncio de cobro a deudores del CAE, se descubrió que 17 mil de 342 mil son empleados públicos. Valencia debía 218 UTM ($15.220.000), pero demostró que es de 75,51 UTM ($5.277.318), pagado antes del reportaje.</p>
+                    <a href="../noticias/noticiaNacional2.html" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="../imagenes/noticiaNacional3.webp">
+                <div class="card-body">
+                    <h5 class="card-title">Disparos en cercanía de colegio de Valdivia generan preocupación y obligan a suspender clases</h5>
+                    <p class="card-text">Suspensión de clases en Colegio Laura Vicuña de Valdivia por disparos en vía pública. Gobierno descarta ataque al establecimiento. Rectora activa protocolo de seguridad. Seremi de Seguridad confirma disparos en cercanías del colegio. Investigación a cargo de ECOH del Ministerio Público. Seremi de Educación en contacto con Carabineros y dirección del colegio. Ningún establecimiento educacional en Los Ríos afectado por balaceras hasta la fecha. Hechos violentos atendidos con protocolos de emergencia.</p>
+                    <a href="../noticias/noticiaNacional3.html" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--Formulario de contacto-->
+<section class="contacto-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+
+                        <form action="controllers/contactoController.php" method="POST">
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="nombre"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email"
+                                       class="form-control"
+                                       name="correo"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control"
+                                          rows="5"
+                                          name="mensaje"
+                                          required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit"
+                                        name="enviarContacto"
+                                        class="btn btn-dark">
+                                    Enviar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <h4>El Faro</h4>
+        <p>Noticias confiables y actualizadas</p>
+        <p>contacto@elfaro.cl</p>
+    </div>
+</footer>
+
+<!--Modal Registro-->
+<div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">Registro de Usuario</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="controllers/usuarioController.php" method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nombre"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="apellido"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email"
+                               class="form-control"
+                               name="correo"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text"
+                               class="form-control"
+                               name="usuario"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                                name="registrarUsuario"
+                                class="btn btn-warning">
+                            Registrarse
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

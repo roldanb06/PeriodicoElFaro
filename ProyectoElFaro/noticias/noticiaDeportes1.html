@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Deportes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .aviso {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .noticia-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .contenido {
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /*Sección formulario contacto*/
+        .contacto-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="aviso">
+    Estás leyendo una noticia completa en El Faro
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.php">El Faro</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/nacional.html">Nacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/deportes.html">Deportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/internacional.html">Internacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/economia.html">Economía</a></li>
+                <li class="nav-item ms-3">
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registroModal">
+                        Registrarse
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4 contenido">
+    <a href="../webs/deportes.html" class="btn btn-secondary mb-3">← Volver a sección</a>
+    <h1 class="mb-3">Mundial 2026: elevan en un 1000% valor del pasaje para llegar a estadio mundialista de New York</h1>
+    <p class="text-muted">Publicado el 17 de abril de 2026</p>
+    <img src="../imagenes/noticiaDeportes1.jpg" class="noticia-img my-3">
+    <p>
+        En más de un 1000% subirán los pasajes en tren para el MetLife Stadium de New York durante los partidos del Mundial 2026, según anunció la autoridad neoyorkina este viernes.<br><br>
+
+        New Jersey Transit anunció que los boletos de tren al recinto deportivo, donde además se jugará la final de la Copa del Mundo, costarán 150 dólares cada uno, muy por sobre los 13 dólares que valen normalmente.<br><br>
+
+        Según diferentes medios de la Gran Manzana, como Business Insider y NBC New York, esto forma parte del plan de la agencia para transportar a más de 78.000 espectadores en cada partido.<br><br>
+    </p>
+    <p>
+        Los boletos, personales y no reembolsables, podrán ser adquiridos desde el 13 de mayo y solo por los titulares de las entradas a los respectivos partidos. Se trata de tickets de ida y vuelta, que solo se venderán a través de la aplicación móvil de NJ Transit.<br><br>
+
+        “Habrá 40.000 billetes de ida y vuelta disponibles cada día de partido, y los billetes no estarán a la venta el mismo día en las taquillas de las estaciones ni en las máquinas expendedoras”, aseguró la NBC.<br><br>
+
+        En un comunicado de prensa, las autoridades precisaron que también existirá un servicio de autobuses al estadio, el que costará 80 dólares por viaje de ida y vuelta.<br><br>
+
+        Se espera que el estadio, que albergará ocho partidos, incluida la final del 19 de julio, atraiga a más de 78.000 aficionados por encuentro. Los que practicamente se verán obligados a utilizar el transporte público debido a que la mayoría de los estacionamientos en el recinto estarán cerrado.
+    </p>
+
+    <p>
+        Kris Kolluri, presidente y director ejecutivo de NJ Transit aseguró en rueda de prensa que “esto no es especulación de precios. Simplemente estamos intentando recuperar nuestros costes”.<br><br>
+
+        Como era de esperarse, el fuerte aumento de las tarifas generó indignación de las gobernadoras de New Jersey y New York. Mikie Sherrill, aseguró que NJ quedó con una gran deuda en transporte después de que la FIFA no aportara fondos para el transporte público.<br><br>
+
+        “Hemos heredado un acuerdo en el que la FIFA no aporta ni un solo dólar para el transporte del Mundial 2026”, escribió Sherrill en X.<br><br>
+
+        “No voy a endosarles esa factura a los viajeros de New Jersey durante años, no es justo”, añadió Sherrill.<br><br>
+
+        En tanto que la gobernadora de New York, Kathy Hochul, ya había asegurado a principio de semana que “cobrar más de 100 dólares por un corto viaje en tren le parece excesivamente caro”.
+    </p>
+</div>
+
+<!--Formulario de contacto-->
+<section class="contacto-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+
+                        <form action="controllers/contactoController.php" method="POST">
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="nombre"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email"
+                                       class="form-control"
+                                       name="correo"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control"
+                                          rows="5"
+                                          name="mensaje"
+                                          required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit"
+                                        name="enviarContacto"
+                                        class="btn btn-dark">
+                                    Enviar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <h4>El Faro</h4>
+        <p>Noticias confiables y actualizadas</p>
+        <p>contacto@elfaro.cl</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!--Modal Registro-->
+<div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">Registro de Usuario</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="controllers/usuarioController.php" method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nombre"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="apellido"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email"
+                               class="form-control"
+                               name="correo"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text"
+                               class="form-control"
+                               name="usuario"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                                name="registrarUsuario"
+                                class="btn btn-warning">
+                            Registrarse
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

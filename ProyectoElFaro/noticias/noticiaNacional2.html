@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Nacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .aviso {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .noticia-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .contenido {
+            max-width: 800px;
+            margin: auto;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /*Sección formulario contacto*/
+        .contacto-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="aviso">
+    Estás leyendo una noticia completa en El Faro
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.php">El Faro</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/nacional.html">Nacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/deportes.html">Deportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/internacional.html">Internacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="../webs/economia.html">Economía</a></li>
+                <li class="nav-item ms-3">
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registroModal">
+                        Registrarse
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4 contenido">
+    <a href="../webs/nacional.html" class="btn btn-secondary mb-3">← Volver a sección</a>
+    <h1 class="mb-3">Fiscal nacional Ángel Valencia reconoce deuda universitaria: la pagó tras consultas de la prensa</h1>
+    <p class="text-muted">Publicado el 17 de abril de 2026</p>
+    <img src="../imagenes/noticiaNacional1.webp" class="noticia-img my-3">
+    <p>
+        El fiscal nacional, Ángel Valencia, reconoció la millonaria deuda universitaria que arrastraba desde 2004 y que se hizo pública recientemente. En este contexto, aseguró que ya regularizó su situación, pero recién tras ser contactado por la prensa.<br><br>
+
+        La deuda del máximo representante del Ministerio Público se conoció tras una investigación periodística que reveló que Valencia y más de 30 altos funcionarios del Congreso y Contraloría figuraban como deudores universitarios del Fondo Solidario de Crédito Universitario (FSCU).<br><br>
+
+        Tras el anuncio del Gobierno sobre comenzar a cobrar a los deudores del Crédito con Aval del Estado (CAE), una publicación de Mega dio a conocer que, de 342 mil deudores, unos 17 mil son funcionarios públicos.<br><br>
+    </p>
+    <h2>Deuda del Fiscal Nacional</h2>
+    <p>
+        En cuanto al fiscal nacional Ángel Valencia, en el mencionado reportaje figuraba con una deuda de 218 UTM, es decir, unos $15.220.000.<br><br>
+
+        Fue el propio fiscal quien envió a Radio Bío Bío su comprobante de deuda, donde se detalla que el monto adeudado ascendía a 75,51 UTM. Es decir, $5.277.318.<br><br>
+
+        Sobre lo anterior, dijo a La Radio que “hay una diferencia entre el monto publicado y el pagaré reprogramado que corresponde a intereses; yo egresé hace más de 30 años”.<br><br>
+
+        “No tengo deuda con la universidad por crédito universitario. Tuve un saldo pendiente del último año de mi carrera, y está pagado antes de la publicación de la nota (de Mega). Pero está todo pagado, intereses incluidos“, aseveró el persecutor a Radio Bío Bío.<br><br>
+
+        De acuerdo con el mismo documento al que accedió La Radio, el pago fue concretado el pasado 10 de abril, días antes de la publicación del reportaje que destapó la deuda de Valencia. De hecho, el mismo medio sostiene que el pago fue ejecutado tras el requerimiento de la prensa.
+    </p>
+    <h2>Comprobante del pago fiscal:</h2>
+    <img src="../imagenes/Comprobante de pago.png" class="noticia-img my-3">
+</div>
+
+<!--Formulario de contacto-->
+<section class="contacto-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+
+                        <form action="controllers/contactoController.php" method="POST">
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="nombre"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email"
+                                       class="form-control"
+                                       name="correo"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control"
+                                          rows="5"
+                                          name="mensaje"
+                                          required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit"
+                                        name="enviarContacto"
+                                        class="btn btn-dark">
+                                    Enviar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <h4>El Faro</h4>
+        <p>Noticias confiables y actualizadas</p>
+        <p>contacto@elfaro.cl</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<!--Modal Registro-->
+<div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">Registro de Usuario</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="controllers/usuarioController.php" method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nombre"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="apellido"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email"
+                               class="form-control"
+                               name="correo"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text"
+                               class="form-control"
+                               name="usuario"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                                name="registrarUsuario"
+                                class="btn btn-warning">
+                            Registrarse
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

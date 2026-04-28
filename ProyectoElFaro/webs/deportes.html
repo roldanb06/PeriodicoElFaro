@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Faro - Deportes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .aviso {
+            background-color: #ffc107;
+            text-align: center;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        /*Sección formulario contacto*/
+        .contacto-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="aviso">
+    Noticias deportivas actualizadas minuto a minuto
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.php">El Faro</a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="nacional.html">Nacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="deportes.html">Deportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="internacional.html">Internacional</a></li>
+                <li class="nav-item"><a class="nav-link" href="economia.html">Economía</a></li>
+                <li class="nav-item ms-3">
+                    <button class="btn btn-warning"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registroModal">
+                        Registrarse
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+    <h2 class="mb-4 text-center">Noticias Deportivas</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="../imagenes/noticiaDeportes1.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Mundial 2026: elevan en un 1000% valor del pasaje para llegar a estadio mundialista de New York</h5>
+                    <p class="card-text">El MetLife Stadium en New York verá un aumento de más de un 1000% en los pasajes de tren durante el Mundial 2026, subiendo de 13 a 150 dólares. Los boletos, personales y no reembolsables, solo estarán disponibles para titulares de entradas de partido a través de la app de NJ Transit, con 40.000 boletos diarios de ida y vuelta. Se ofrecerá también un servicio de autobuses por 80 dólares.</p>
+                    <a href="../noticias/noticiaDeportes1.html" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="../imagenes/noticiaDeportes2.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Con una gran remontada: Chile venció a Uruguay y remató quinto en Sudamericano Sub 17</h5>
+                    <p class="card-text">La Roja Sub 17 consiguió un importante triunfo 3-2 sobre Uruguay en el Sudamericano, asegurando el quinto lugar en el torneo. A pesar de haberse clasificado al Mundial de Qatar previamente, el equipo liderado por Ariel Leporati quería sellar su posición en el campeonato y lo logró luego de una remontada. Amaro Riveros y Lucas López marcaron para Chile, que supo defenderse del rival.</p>
+                    <a href="../noticias/noticiaDeportes2.html" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="../imagenes/noticiaDeportes3.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Fórmula 1: FIA aprueba ajustes a reglamento para hacer carreras más rápidas y emocionantes</h5>
+                    <p class="card-text">Después de tres carreras, la Fórmula 1 encara una evolución técnica que promete cambiar la forma en que pilotos y equipos interpretan la velocidad.
+
+                    La FIA, junto con los directores de equipo, fabricantes de motores y la FOM (Formula One Management), ha aprobado una serie de ajustes al reglamento que entrarían en vigor en Miami, pendientes del visto bueno del Consejo Mundial del Deporte Motor.
+
+                    El objetivo es claro y es tener carreras más rápidas, seguras y emocionantes, corrigiendo problemas detectados en los primeros Grandes Premios y escuchando directamente las opiniones de los protagonistas en pista.
+                    </p>
+                    <a href="../noticias/noticiaDeportes3.html" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--Formulario de contacto-->
+<section class="contacto-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow">
+                    <div class="card-body p-4">
+
+                        <h2 class="text-center mb-4">Formulario de Contacto</h2>
+
+                        <form action="controllers/contactoController.php" method="POST">
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text"
+                                       class="form-control"
+                                       name="nombre"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email"
+                                       class="form-control"
+                                       name="correo"
+                                       required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control"
+                                          rows="5"
+                                          name="mensaje"
+                                          required></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit"
+                                        name="enviarContacto"
+                                        class="btn btn-dark">
+                                    Enviar
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <h4>El Faro</h4>
+        <p>Noticias confiables y actualizadas</p>
+        <p>contacto@elfaro.cl</p>
+    </div>
+</footer>
+
+<!--Modal Registro-->
+<div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title">Registro de Usuario</h5>
+
+                <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="controllers/usuarioController.php" method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="nombre"
+                                   required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="apellido"
+                                   required>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email"
+                               class="form-control"
+                               name="correo"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Usuario</label>
+                        <input type="text"
+                               class="form-control"
+                               name="usuario"
+                               required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password"
+                               class="form-control"
+                               name="password"
+                               required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                                name="registrarUsuario"
+                                class="btn btn-warning">
+                            Registrarse
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
